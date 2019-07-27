@@ -1,0 +1,6 @@
+package capgemini.javabeans;
+
+public class Circle {
+	//field
+	private float
+}

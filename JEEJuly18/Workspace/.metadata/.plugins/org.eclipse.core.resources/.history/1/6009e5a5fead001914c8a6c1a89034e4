@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Lab1_Ex3_IncreasingNumber {
+	public static boolean checkNumber(int n){
+		boolean ans;
+		boolean flag=true;
+		String str = ""+n;
+		char[] digit = str.toCharArray();
+		for(int i = 0; i < digit.length; i++){
+			if(digit[i]>digit[i++]){
+				flag=false;
+				break;
+			}
+		}
+		if(flag==false)
+			return false;
+		else
+			return true;
+	
+	
+	}
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		boolean ans = checkNumber(n);
+		System.out.println(ans);
+		sc.close();
+	}
+}

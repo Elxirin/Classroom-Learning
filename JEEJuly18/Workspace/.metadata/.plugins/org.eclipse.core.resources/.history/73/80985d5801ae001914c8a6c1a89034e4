@@ -1,0 +1,25 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Lab1_Ex3_IncreasingNumber {
+	public static boolean checkNumber(int n){
+		boolean ans;
+		boolean flag=true;
+		String str = Integer.toString(n);
+		//int[] digit = new int[str.length()];
+		for(int i=0;i<str.length();i++){
+			if(((int)str.charAt(i))>((int)str.charAt(i++))){
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		boolean ans = checkNumber(n);
+		System.out.println(ans);
+		sc.close();
+	}
+}

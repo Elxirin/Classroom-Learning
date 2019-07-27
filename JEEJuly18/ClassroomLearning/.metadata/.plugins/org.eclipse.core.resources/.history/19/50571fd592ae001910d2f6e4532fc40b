@@ -1,0 +1,37 @@
+package Capgemini.oops;
+
+public class Circle {
+	// Field...
+	float radius;
+
+	// Constructors..
+	public Circle() {
+		radius = 0.0f;
+		System.out.println("Circle->def...");
+	}
+
+	// Constructor Overloading
+	public Circle(float pradius) {
+		radius = pradius;
+		System.out.println("Circle->Parameter");
+	}
+
+	// methods
+	public void draw() {
+		System.out.println("circle is drawn..");
+	}
+
+	public double calcArea() {
+		return radius * radius * Math.PI;
+	}
+	
+	//method overriding from parent Object Class
+	@Override //java Annotation:Instructions For Compiler
+	public String toString(){
+		return "Radius:" + radius;
+	}
+}
+
+public class Circle_Test{
+	
+}

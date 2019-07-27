@@ -1,0 +1,36 @@
+package LabExercise3;
+
+import java.util.Scanner;
+
+public class Lab3_Ex2_SortString {
+
+	public static String[] getSorted(String[] str) {
+		for(int i=0;i<str.length;i++) {
+			for(int j=0;j<str.length-1;j++) {
+				if(((int)str[i].charAt(0))<((int)str[j].charAt(0))) {
+					String temp =  str[i];
+					str[i]=str[j];
+					str[j]=temp;
+				}
+			}
+		}
+		for(int i=0;str.length%2==0?i<str.length:i<str.length+1;i++) {
+			str[i]=str[i].toUpperCase();
+		}
+		return str;
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of strings to be sorted : ");
+		int n = sc.nextInt();
+		String str[] = new String[n];
+		for(int i=0;i<n;i++) {
+			str[i]=sc.next();
+		}
+		str = getSorted(str);
+		for(int i=0;i<n;i++) {
+			System.out.println(str[i]);
+		}
+	}
+}

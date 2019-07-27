@@ -1,0 +1,7 @@
+package Capgemini.oops;
+
+public interface IStack {
+	void push(String name);
+	
+	String pop();
+}

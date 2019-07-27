@@ -1,0 +1,10 @@
+package capgemini.javabeans;
+
+public class Circle {
+	//field
+	private float radius;
+	
+	private void showRadius(){
+		System.out.println("Radius : "+radius);	
+	}
+}

@@ -1,0 +1,5 @@
+package Capgemini.abstracts;
+
+public abstract class Shape {
+
+}

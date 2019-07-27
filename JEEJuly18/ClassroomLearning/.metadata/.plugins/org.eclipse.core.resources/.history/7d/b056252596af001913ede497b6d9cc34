@@ -1,0 +1,15 @@
+package capgemini.exception;
+
+import java.io.FileInputStream;
+
+public class MyException {
+	public static void main(String[] args) {
+		System.out.println("started...");
+		String name = null;
+		name.toLowerCase();
+		System.out.println("End...");
+		
+		
+		FileInputStream fileInput = new FileInputStream("C:\\Perf.txt");
+	}
+}

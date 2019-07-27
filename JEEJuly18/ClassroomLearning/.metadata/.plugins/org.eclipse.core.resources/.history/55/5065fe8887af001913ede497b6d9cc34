@@ -1,0 +1,7 @@
+package capgemini.lang;
+
+public class MySystem {
+	public static void main(String[] args) {
+		System.out.println("Current Time in Milliseconds" + System.currentTimeMillis());
+	}
+}

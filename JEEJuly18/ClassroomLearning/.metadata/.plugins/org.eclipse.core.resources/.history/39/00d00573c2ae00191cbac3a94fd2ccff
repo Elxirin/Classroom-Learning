@@ -1,0 +1,29 @@
+package Capgemini.oops;
+import java.util.*;
+public class IStackImplementation implements IStack{
+
+	ArrayList a = new ArrayList();
+	
+	public void push(String name){	
+		a.add(name);
+	}
+	
+	public String pop(){
+		String name = (String)a.get(a.size()-1);
+		a.remove(a.size()-1);
+		return name;
+	}
+	
+	public void display(){
+		System.out.println(a);
+	}
+	public static void main(String[] args){
+		IStackImplementation i = new IStackImplementation();
+		i.push("Piyush");
+		i.display();
+		i.push("Aditya");
+		i.display();
+		System.out.println(i.pop());
+		i.display();
+	}
+}

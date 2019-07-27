@@ -1,0 +1,54 @@
+package LabExercise3;
+
+import java.util.Scanner;
+
+public class Lab3_Ex4_CharacterCount {
+
+	
+	public static void countCharacter(char[] a) {
+		char[] visited = new char[a.length];
+		int count[] = new int[a.length];
+		int i=0,j=0;
+		boolean flag = false;
+		for(i=0;i<a.length;i++) {
+			for(j=0;j<i;j++) {
+				if(a[i]==a[j]) {
+					flag=true;
+					break;
+				}
+			}
+			if(flag==false) {
+				visited[i]=a[i];
+				count[i]++;
+			}
+			else if(flag == true) {
+				count[j]++;
+			}
+			
+		}
+		for(int x=0;x<count.length;x++) {
+			if(count[x]>0) {
+				System.out.println(a[x]+" : "+count[x]);
+			}
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of characters in the array");
+		int n = sc.nextInt();
+		char[] a = new char[n];
+		for(int i=0;i<n;i++) {
+			a[i] = sc.next().charAt(0);
+		}
+	
+		countCharacter(a);
+		/*for(int i=0;i<n;i++) {
+			System.out.println(a[i]+" ");
+		}*/
+		
+		sc.close();
+	}
+}

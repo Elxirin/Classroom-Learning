@@ -1,0 +1,6 @@
+package capgemini.javabeans;
+
+public class Rectangle {
+	//field
+	private float
+}

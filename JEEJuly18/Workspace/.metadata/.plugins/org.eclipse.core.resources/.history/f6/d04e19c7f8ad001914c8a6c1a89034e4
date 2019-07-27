@@ -1,0 +1,36 @@
+
+/**
+* <h1>Calculate Sum</h1>
+* The CalculateSum program implements an application that
+* simply gives a sum of first n natural numbers divisible by 3 or 5
+* <p>
+
+* @author  Piyush Nandurkar
+* @version 1.0
+* @since   2019-07-24 
+*/
+
+import java.util.Scanner;
+
+public class Lab1_Ex2_CalculateDifference {
+	public static int calculateDifference(int n) {
+		int ss=0,Sum=0;
+		
+		for(int i=1;i<=n;i++){
+			ss+=i*i;
+		}
+		for(int i=1;i<=n;i++){
+			Sum+=i;
+		}
+		Sum=Sum*Sum;
+		Sum=ss-Sum;
+		return Sum;
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int sum = calculateDifference(n);
+		System.out.println(sum);
+	}
+}

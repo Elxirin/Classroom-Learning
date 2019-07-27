@@ -1,0 +1,8 @@
+package Capgemini.oops;
+
+public class Subject {
+
+	String subject;
+	float marks;
+	
+}

@@ -1,0 +1,88 @@
+package capgemini.oops1;
+
+public class Student1 {
+	int rollNo;
+	String name;
+	Double marks;
+
+	String[] subjects;
+	Double[] marks1;
+
+	final Double OUT_OF_MARKS = 300.0;
+
+	public Student1() {
+		rollNo = 0;
+		name = null;
+		marks = 0.0;
+		// pending
+	}
+
+	public Student1(int rollNo, String name, String[] subjects, Double[] marks1) {
+		this.rollNo = rollNo;
+		this.name = name;
+		this.marks1 = marks1;
+		this.subjects = subjects;
+	}
+
+	public void display() {
+		System.out.println("Roll No. : " + rollNo);
+		System.out.println("Name : " + name);
+		for (int i = 0; i < marks1.length; i++) {
+			System.out.println(subjects[i] + " : " + marks1[i]);
+		}
+	}
+
+	public String calcGrade() {
+		double percentage = calcPercentage();
+		if (percentage >= 85) {
+			return "A";
+		} else if (percentage >= 65) {
+			return "B";
+		} else if (percentage >= 45) {
+			return "C";
+		} else
+			return "Fail";
+	}
+
+	public double calcPercentage() {
+		// return ((marks/OUT_OF_MARKS)*100);
+		double obtMarks = 0.0;
+		for (double d : marks1) {
+			obtMarks += d;
+		}
+		return ((obtMarks / OUT_OF_MARKS) * 100);
+	}
+
+	public void printMarksheet() {
+		display();
+		System.out.println("Grade is : " + calcGrade());
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (o == this)
+			return true;
+		if (o == null)
+			return false;
+		if (!(o instanceof Student1))
+			return false;
+		Student1 s = (Student1) o;
+		if (!(s.rollNo == this.rollNo && s.name.equals(this.name) && s.marks == this.marks))
+			return false;
+		else
+			return true;
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Roll No. : %d\nName : %s\nMarks : %f", rollNo, name, marks);
+	}
+
+	public static void main(String[] args) {
+		String[] subject = { "Maths", "Science", "English" };
+		Double[] marks = { 75.0, 87.0, 67.0 };
+		Student1 s1 = new Student1(101, "Aditya Ranade", subject, marks);
+		s1.printMarksheet();
+	}
+}
+

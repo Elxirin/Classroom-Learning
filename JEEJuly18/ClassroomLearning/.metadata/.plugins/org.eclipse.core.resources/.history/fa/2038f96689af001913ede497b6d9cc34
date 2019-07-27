@@ -1,0 +1,23 @@
+package capgemini.lang;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+public class MySystem {
+	public static void main(String[] args) {
+		System.out.println("Current Time in Milliseconds : " + System.currentTimeMillis());
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM dd,yyyy HH:mm");    
+		Date date = new Date(System.currentTimeMillis());
+		System.out.println(sdf.format(date)); 
+		
+		MySystem m1 = new MySystem();
+		MySystem m2 = new MySystem();
+		System.out.println("Heap memeory Before : "+ Runtime.getRuntime().freeMemory()); 
+		m1=m2=null;
+		System.gc();
+		System.out.println("Garbage Collected");
+		System.out.println("Heap memeory Before : "+ Runtime.getRuntime().freeMemory()); 
+		
+		System.out.println(System.lineSeparator());
+		
+	}
+}

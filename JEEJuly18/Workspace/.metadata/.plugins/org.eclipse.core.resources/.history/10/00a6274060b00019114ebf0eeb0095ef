@@ -1,0 +1,33 @@
+package LabExercise5;
+
+import java.awt.Checkbox;
+import java.awt.CheckboxGroup;
+import java.awt.Color;
+import java.awt.Frame;
+
+public class Lab5_Ex1_TrafficLights {
+
+	public Lab5_Ex1_TrafficLights() {
+		Frame f = new Frame("Traffic Lights");
+		CheckboxGroup cbg = new CheckboxGroup();
+		Checkbox cb1 = new Checkbox("",cbg,false);
+		Checkbox cb2 = new Checkbox("",cbg,false);
+		Checkbox cb3 = new Checkbox("",cbg,false);
+		cb1.setBounds(100,100,50,50);
+		cb1.setBackground(Color.RED);
+		cb2.setBounds(100,150,50,50);
+		cb2.setBackground(Color.YELLOW);
+		cb3.setBounds(100,200,50,50);
+		cb3.setBackground(Color.GREEN);
+		f.add(cb1);
+		f.add(cb2);
+		f.add(cb3);
+		f.setSize(700,500);
+		f.setLayout(null);
+		f.setVisible(true);
+	}
+	
+	public static void main(String[] args) {
+		new Lab5_Ex1_TrafficLights();
+	}
+}
