@@ -1,0 +1,5 @@
+package capgimini.interfaces;
+
+public interface Calculator {
+
+}

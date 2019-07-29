@@ -1,0 +1,21 @@
+package capgemini.junit;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class JUnit4_Test {
+
+	@Test
+	public void test() {
+		System.out.println("JUnit4_Test->test...");
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testAdd() {
+		System.out.println("JUnit4_Test->test...");
+		fail("Not yet implemented");
+	}
+	
+}

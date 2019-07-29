@@ -67,6 +67,6 @@ public class Lab2_Ex_Library_Test {
 			}
 			
 		}
-		
+		sc.close();
 	}
 }

@@ -18,5 +18,6 @@ public class Lab4_Ex1_Operators {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		System.out.println(sumOfCubes(n));
+		sc.close();
 	}
 }

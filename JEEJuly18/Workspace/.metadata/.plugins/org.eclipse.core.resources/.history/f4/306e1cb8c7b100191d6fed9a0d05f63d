@@ -1,0 +1,38 @@
+package LabExercise5;
+
+import java.util.Scanner;
+
+public class Lab5_Ex2_Fibonacci {
+	static int n1=0,n2=1,n3;
+	public static void fibonacci(int n) {
+		int f1=0,f2=1,f3;
+		System.out.print(f1 + " " + f2 + " "	);
+		for(int i=2;i<n;i++) {
+			f3 = f1+f2;
+			System.out.print(f3+ " ");
+			f1 = f2;
+			f2 = f3;
+		}
+		
+	}
+	
+	public static void rec_Fibonacci(int n){    
+	        
+	    if(n>0){    
+	         n3 = n1 + n2;    
+	         n1 = n2;    
+	         n2 = n3;    
+	         System.out.print(n3+" ");  
+	         rec_Fibonacci(n-1);    
+	    }    
+	}    
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		//fibonacci(n);
+		rec_Fibonacci(n);
+		sc.close();
+	}
+}

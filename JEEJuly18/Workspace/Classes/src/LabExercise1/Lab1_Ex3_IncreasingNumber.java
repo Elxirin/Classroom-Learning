@@ -1,6 +1,6 @@
 package LabExercise1;
 import java.util.Scanner;
-import java.util.Arrays;
+
 public class Lab1_Ex3_IncreasingNumber {
 	public static boolean checkNumber(int n){
 		String str = Integer.toString(n);
